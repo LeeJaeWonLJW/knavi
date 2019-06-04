@@ -5,10 +5,6 @@ import predict_kw
 
 app=Flask(__name__)
 
-@app.route("/")
-def hello():
-    return render_template('index.html')
-
 @app.route("/cnn", methods = ['POST'])
 def cnn():
     f = request.files['file']
