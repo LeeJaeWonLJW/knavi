@@ -23,6 +23,7 @@ def cnn():
     response = {
         "name": result[0]
     }
+    
     return jsonify(response), 200
 
 if __name__=="__main__":
