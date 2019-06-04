@@ -10,7 +10,7 @@ def hello():
 @app.route("/cnn", methods = ['POST'])
 def cnn():
     f = request.files['file']
-    data = open(f, 'rb')
+    data = open(secure_filename(f.filename), 'rb')
     print(data)
     return 'test'
 
