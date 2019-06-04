@@ -1,4 +1,6 @@
 from flask import Flask, request
+from werkzeug import secure_filename
+
 import predict_kw
 
 app=Flask(__name__)
