@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from werkzeug import secure_filename
 
 import predict_kw
@@ -7,7 +7,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "<h1>Hello Python Flask</h1>"
+    return render_template('index.html')
 
 @app.route("/cnn", methods = ['POST'])
 def cnn():
